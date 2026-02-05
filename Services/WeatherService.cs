@@ -70,9 +70,9 @@ namespace Dart.Weather.Api.Services
                             var mapped = new WeatherResultDto
                             {
                                 Date = stored.date ?? iso,
-                                MinTemperatureC = stored.minTemperature,
-                                MaxTemperatureC = stored.maxTemperature,
-                                PrecipitationMm = stored.precipitationMm,
+                                MinTemperature = stored.minTemperature,
+                                MaxTemperature = stored.maxTemperature,
+                                Precipitation = stored.precipitationMm,
                                 Status = "OK",
                                 SourceFile = _repo.GetFilePath(iso)
                             };

@@ -77,13 +77,13 @@ namespace Dart.Weather.Api.Infrastructure
                 if (idx < 0) idx = 0;
 
                 if (openResp.Daily.Temperature2mMin != null && idx < openResp.Daily.Temperature2mMin.Length)
-                    dto.MinTemperatureC = openResp.Daily.Temperature2mMin[idx];
+                    dto.MinTemperature = openResp.Daily.Temperature2mMin[idx];
 
                 if (openResp.Daily.Temperature2mMax != null && idx < openResp.Daily.Temperature2mMax.Length)
-                    dto.MaxTemperatureC = openResp.Daily.Temperature2mMax[idx];
+                    dto.MaxTemperature = openResp.Daily.Temperature2mMax[idx];
 
                 if (openResp.Daily.PrecipitationSum != null && idx < openResp.Daily.PrecipitationSum.Length)
-                    dto.PrecipitationMm = openResp.Daily.PrecipitationSum[idx];
+                    dto.Precipitation = openResp.Daily.PrecipitationSum[idx];
             }
 
             return dto;
@@ -128,13 +128,13 @@ namespace Dart.Weather.Api.Infrastructure
                 if (idx < 0) idx = 0;
 
                 if (openResp.Daily.Temperature2mMin != null && idx < openResp.Daily.Temperature2mMin.Length)
-                    dto.MinTemperatureC = openResp.Daily.Temperature2mMin[idx];
+                    dto.MinTemperature = openResp.Daily.Temperature2mMin[idx];
 
                 if (openResp.Daily.Temperature2mMax != null && idx < openResp.Daily.Temperature2mMax.Length)
-                    dto.MaxTemperatureC = openResp.Daily.Temperature2mMax[idx];
+                    dto.MaxTemperature = openResp.Daily.Temperature2mMax[idx];
 
                 if (openResp.Daily.PrecipitationSum != null && idx < openResp.Daily.PrecipitationSum.Length)
-                    dto.PrecipitationMm = openResp.Daily.PrecipitationSum[idx];
+                    dto.Precipitation = openResp.Daily.PrecipitationSum[idx];
             }
 
             return dto;
@@ -262,13 +262,13 @@ namespace Dart.Weather.Api.Infrastructure
             if (idx < 0) idx = 0;
 
             if (resp.Daily.Temperature2mMin != null && idx < resp.Daily.Temperature2mMin.Length)
-                dto.MinTemperatureC = resp.Daily.Temperature2mMin[idx];
+                dto.MinTemperature = resp.Daily.Temperature2mMin[idx];
 
             if (resp.Daily.Temperature2mMax != null && idx < resp.Daily.Temperature2mMax.Length)
-                dto.MaxTemperatureC = resp.Daily.Temperature2mMax[idx];
+                dto.MaxTemperature = resp.Daily.Temperature2mMax[idx];
 
             if (resp.Daily.PrecipitationSum != null && idx < resp.Daily.PrecipitationSum.Length)
-                dto.PrecipitationMm = resp.Daily.PrecipitationSum[idx];
+                dto.Precipitation = resp.Daily.PrecipitationSum[idx];
 
             return dto;
         }
@@ -305,13 +305,13 @@ namespace Dart.Weather.Api.Application.DTOs
         public string Date { get; set; } = string.Empty;
 
         // Minimum temperature in Celsius (nullable)
-        public double? MinTemperatureC { get; set; }
+        public double? MinTemperature { get; set; }
 
         // Maximum temperature in Celsius (nullable)
-        public double? MaxTemperatureC { get; set; }
+        public double? MaxTemperature { get; set; }
 
         // Precipitation sum in mm (nullable)
-        public double? PrecipitationMm { get; set; }
+        public double? Precipitation { get; set; }
 
         // HTTP status code returned by the Open‑Meteo request
         public int StatusCode { get; set; }

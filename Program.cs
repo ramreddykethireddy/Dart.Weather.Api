@@ -26,6 +26,20 @@ builder.Logging.AddProvider(new FileLoggerProvider(Path.Combine(logFolder, "app.
 // Add services to the container.
 builder.Services.AddControllers();
 
+// Add CORS policy to allow Angular front-end during development
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "AllowAngularDev",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:4200")
+                  .AllowAnyHeader()
+                  .AllowAnyMethod()
+                  .AllowCredentials();
+        });
+});
+
+
 // Register Open-Meteo HTTP client (typed client)
 builder.Services.AddHttpClient<OpenMeteoClient>();
 
@@ -50,6 +64,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// Apply CORS globally
+app.UseCors("AllowAngularDev");
 
 app.UseAuthorization();
 

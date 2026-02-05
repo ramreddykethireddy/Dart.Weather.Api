@@ -41,9 +41,9 @@ namespace Dart.Weather.Api.Infrastructure
             var minimal = new
             {
                 date = isoDate,
-                minTemperature = mapped.MinTemperatureC,
-                maxTemperature = mapped.MaxTemperatureC,
-                precipitationMm = mapped.PrecipitationMm
+                minTemperature = mapped.MinTemperature,
+                maxTemperature = mapped.MaxTemperature,
+                precipitationMm = mapped.Precipitation
             };
 
             var json = JsonSerializer.Serialize(minimal, new JsonSerializerOptions { WriteIndented = true });
