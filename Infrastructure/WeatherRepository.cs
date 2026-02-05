@@ -1,8 +1,4 @@
-using System;
-using System.IO;
 using System.Text.Json;
-using System.Threading.Tasks;
-using Dart.Weather.Api.Application.DTOs;
 
 namespace Dart.Weather.Api.Infrastructure
 {

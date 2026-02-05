@@ -1,16 +1,10 @@
-using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.IO;
-using System.Linq;
 using System.Text.Json;
-using System.Threading.Tasks;
 using Dart.Weather.Api.Application.DTOs;
 using Dart.Weather.Api.Application.Interfaces;
 using Dart.Weather.Api.Infrastructure;
 using Dart.Weather.Api.Helpers;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Hosting;
+
 
 namespace Dart.Weather.Api.Services
 {
@@ -122,13 +116,6 @@ namespace Dart.Weather.Api.Services
             return results;
         }
 
-        // Helper type to deserialize the minimal stored JSON
-        private sealed class StoredWeather
-        {
-            public string? date { get; set; }
-            public double? minTemperature { get; set; }
-            public double? maxTemperature { get; set; }
-            public double? precipitationMm { get; set; }
-        }
+      
     }
 }

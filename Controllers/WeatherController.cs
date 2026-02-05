@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Dart.Weather.Api.Application.Interfaces;
 using Dart.Weather.Api.Infrastructure;
-using System.Threading.Tasks;
 
 namespace Dart.Weather.Api.Controllers
 {
